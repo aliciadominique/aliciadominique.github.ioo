@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buy a Book!</title>
+	<link rel="stylesheet" type="text/css" href="form.css" />
+	<script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+	<div id="header">PURCHASE YOUR BOOK TODAY!</div>
+	<h2 align="center"><em>Escape to the world of stories...</em></h2>
+    <h4> Please enter the following information:</h4>
+    <form name= "purchase" id="purchase">
+    	First Name: <input type="text" name="fname" id="fname" placeholder="First Name" maxlength="50"><br/>
+    	Last Name: <input type="text" name="lname" id="lname" placeholder="Last Name" maxlength="50">
+    	<input type="radio" name="rb" value="Male" id="button1">Male
+		<input type="radio" name="rb" value="Female" id="button2">Female<br/>
+    	E-mail Address: <input type="text" name="email" id="email" placeholder="Valid Email" maxlength="40">
+    	Optional E-mail Address:
+    	<select id="optional" name="optional" onchange="check(this)">
+    		<option value="none" id="none">None</option>
+  			<option value="yes" id="yes">Back-up E-mail</option>
+		</select><br/>
+		For Optional E-mail Address:
+		<input type="text" name="backup" id="backup" placeholder="sample@email.com" maxlength="50" disabled><br/>
+    	Contact Number: <input type="text" name="phone" id="phone" placeholder="Phone Number" maxlength="11"><br/>
+    	Delivery Address: <input type="text" name="address" id="address" placeholder="Home Address" maxlength="50"><br/>
+    	Enter number of books to purchase: <input type="number" name="booknum" id="booknum" style="width: 50px"><br/>
+    	Enter the book and author of your choice:
+		<textarea name="books" id="books" placeholder="e.g. Harry Potter and the Sorcerer's Stone - J.K. Rowling" cols="50" rows="2" maxlength="200"></textarea><br/>
+		Payment Options:
+			<select id="payment" name="payment" onchange="othercheck(this)">
+				<option value="cod" id="cod">Cash on Delivery</option>
+  				<option value="cc" id="cc">Credit Card</option>
+			</select><br/>
+		For Credit Card Option, enter Credit Card Number:
+			<input type="text" name="ccn" id="ccn" placeholder="4111 1111 1111 1111" maxlength="20" disabled>
+			<em>We keep things secured!</em><br/>
+		<input type="checkbox" name="tandc" id="tandc" value="checkbox">
+		I have read and agreed to the Terms and Conditions.
+		<input type="checkbox" name="updates" id="updates" value="checkbox" checked>
+		Send me updates through my e-mail!<br/>
+    	<input type="button" name="submit_id" id="btn_id" value="Submit" onclick="submitting(purchase)"/>
+    	<input type="reset" name="reset" value="Clear">
+</body>
+</html>
